@@ -1,12 +1,12 @@
 ---
-title: "My First Post"
-date: 2018-06-04T16:02:47-04:00
+title: "MANOR Residence"
 thumbnail: /img/05.jpg
 gallery:
   - imgSrc: /img/05.jpg
     imgTitle: Interior
   - imgSrc: /img/03.jpg
     imgTitle: Exterior
+date: 2018-06-04T16:53:42-04:00
 ---
 Lorem ipsum dolor sit amet, per dolor regione phaedrum et. Pri illud ancillae ne, eu eos erat offendit, altera appetere nominati quo ad. An equidem accusata principes vel. Singulis instructior ei pri. Omnis graecis lucilius et nec.
 
@@ -25,4 +25,3 @@ Solet eirmod vis et, ut duo suas delicatissimi. Mollis singulis ius ei, an quo q
 
 
 Suas sapientem disputando sit eu. Vide tractatos ea eum. Te nam diceret vivendo minimum. Eu ius oratio indoctum, ut ius munere efficiendi necessitatibus, mei ne reque simul accommodare. Enim noster fabulas qui ut, enim argumentum assueverit ex has. Vim ei vivendo consequat concludaturque.
-
