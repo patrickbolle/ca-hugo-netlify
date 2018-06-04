@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "carlosmata.netlify.com"
 languageCode = "en-us"
 title = "Carlos Mata Architecture"
 theme = "ananke"
