@@ -8,12 +8,16 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 collections: # A list of collections the CMS should be able to edit
     - label: "Projects"
       name: "projects"
-      folder: "content/posts" # The path to the folder where the documents are stored
+      folder: "content/projects" # The path to the folder where the documents are stored
       slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
       create: true
       fields:
       - {label: "Project Title", name: "title", widget: "string"}
-      - {label: "Project Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Project URL", name: "project-url", widget: "string"}
+      - {label: "Project Description", name: "body", widget: "markdown", required: false}
+      - {label: "Order (Lower number displays as higher on the page)", name: "weight", widget: "string" }
+      - {label: "Featured?", name: "featured", widget: "boolean", default: false}
+      - {label: "Project Image", name: "thumbnail", widget: "image"}
       - name: "gallery"
         label: "Project Image Gallery" 
         widget: "list"
@@ -21,5 +25,4 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "Image Title", name: "imgTitle", widget: "string"}
           - {label: "Image", name: "imgSrc", widget: "image"}
-      - {label: "Project Description", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "date", widget: "datetime"}

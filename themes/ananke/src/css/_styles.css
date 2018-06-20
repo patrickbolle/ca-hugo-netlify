@@ -3,3 +3,31 @@
 #TableOfContents ul li {
   margin-bottom: 1em;
 }
+
+/* @font-face {
+  font-family: "Avenir Next";
+  src: url('/static/fonts/AvenirNext-Regular.woff2') format('woff2'),
+      url('/static/fonts/AvenirNext-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+body {
+  font-family: "Lato" !important;
+} 
+
+@media (--breakpoint-not-small) {
+  .htc {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+}
+
+.fix-grid-item:nth-child(3) {
+  clear: both;
+}
+
+.w-15 {
+  width: 15%;
+}
