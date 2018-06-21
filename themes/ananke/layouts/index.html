@@ -1,13 +1,44 @@
 {{ define "main" }}
+    <div class="bg-black">
+      {{ range (where .Data.Pages "Section" "in" "projects") }}
+            {{ if (eq .Params.featured true) }}
+              <div class="overlay-container">
+                  <div class="vh-75-ns cover bg-center" style="opacity: 0.5; background-image: url({{- .Params.thumbnail -}}); background-attachment: fixed;"></div>
+                  <div class="bottom-left">
+                      <p class="f1 tracked white lato">Carlos Mata is a multi-disciplinary architect <br>based out of Uvita, Costa Rica.</p>
+                      <a class="f2 fw1 link no-underline white" href="/projects">View Projects + </a> 
+                  </div>
+              </div>
+            {{ end }}
+      {{ end }}
+    </div>
   <article class="cf pa2 pa0-ns">
     <div class="pa4 htc">
       <div class="w-100 w-100-ns fix-grid">
-        {{ range (where .Data.Pages "Section" "in" (slice "projects")) }}
-          <div class="fl w-50 w-50-ns pa1 fix-grid-item">
-            <a href="{{ .Permalink }}" class="dim db no-underline black shadow-5"><img class="db w-100" src="{{ .Params.thumbnail }}"></a>
-          </div>
+        {{ range where .Data.Pages.ByWeight "Section" "in" (slice "projects") | first 5 }}
+          {{ if not (eq .Params.featured true) }}  
+            <div class="fl w-50 w-50-ns pa1 fix-grid-item">
+                <a href="{{ .Permalink }}" class="dim db no-underline black shadow-5"><img class="db w-100" src="{{ .Params.thumbnail }}"></a>
+                <a href="{{ .Permalink }}" class="dim db no-underline black ttu tracked-mega fw1 f4 tc pa4">{{ .Title }}</a>
+            </div>
+          {{ end }}
         {{ end }}
       </div>
     </div>    
+    <div class="tc pa2">
+        <a class="f2 fw1 link no-underline black" href="/projects">View All Projects + </a> 
+      </div>
   </article>
+  <article class="cf pa2 pa0-ns">
+    <div class="pa4">
+      <div class="fl w-100 w-25-ns pa4">
+          <p class="tl f1 fw1 b--black-60 pb4 bb tracked">Carlos Mata</p>
+      </div>
+      <div class="fl w-100 w-75-ns pa4">
+          <p class=" tl f2 fw1">He has given lectures all over the world, and has received significant recognition like the Torroja Award for his Caja Granada or the Award of the UPM University for his Excellence in Teaching. In 2013 he was awarded the Heinrich Tessenow Gold Medal, the Arnold W. Brunner Memorial Prize of the American Academy of Arts and Letters, the International Award Architecture in Stone in Verona, and the RIBA International Fellowship 2014 of the Royal Institute of British Architects. Also in 2014 he was elected Full Member to the Royal Academy of Fine Arts of San Fernando of Spain. </p>
+
+      </div>
+    </div>
+  </article>
+
 {{ end }}

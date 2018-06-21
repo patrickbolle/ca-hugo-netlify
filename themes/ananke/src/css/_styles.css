@@ -32,3 +32,17 @@ body {
   width: 15%;
 }
 
+.overlay-container {
+  position: relative;
+  text-align: left;
+  color: black;
+}
+
+.overlay-image {
+  opacity: 0.5;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+}

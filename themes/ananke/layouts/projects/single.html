@@ -5,10 +5,10 @@
         <div class="ph4 ph5-m ph6-l">
           <div class="pv5 f4 f2-ns measure center">
             <h1 class="fw2 f1 fl w-100 black-70 mt0 mb3 avenir">{{- .Title -}}</h1>
-            <p class="db lh-copy black-50 serif fw4 mv0 f4 f3-m f2-l measure">
-              {{- .Content -}}
-            </p>
-              
+            <div class="avenir db lh-copy black-50 serif fw1 mv0 f4 f3-m f2-l measure">
+                {{- .Content | markdownify -}}
+            </div>
+             
           </div>
         </div>
       </article>
