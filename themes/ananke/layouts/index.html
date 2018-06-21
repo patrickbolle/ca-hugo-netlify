@@ -1,13 +1,10 @@
 {{ define "main" }}
   <article class="cf pa2 pa0-ns">
-    <div class="pa4 htc">
-      <div class="w-100 w-100-ns fix-grid">
-        {{ range (where .Data.Pages "Section" "in" (slice "projects")) }}
-          <div class="fl w-50 w-50-ns pa1 fix-grid-item">
-            <a href="{{ .Permalink }}" class="dim db no-underline black shadow-5"><img class="db w-100" src="{{ .Params.thumbnail }}"></a>
-          </div>
-        {{ end }}
-      </div>
+    <div class="pa4 tc">
+      <img src="/images/cropped-trans-logo.png" class="dib w-50" alt="Site Name">
+      <br><br>
+      <h1 class="fw1 f1">Website Under Construction</h1>
+      
     </div>    
   </article>
 {{ end }}
