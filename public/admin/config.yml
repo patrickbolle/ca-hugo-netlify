@@ -1,0 +1,28 @@
+backend:   
+  name: git-gateway   
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections: # A list of collections the CMS should be able to edit
+    - label: "Projects"
+      name: "projects"
+      folder: "content/projects/" # The path to the folder where the documents are stored
+      slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+      create: true
+      fields:
+      - {label: "Project Title", name: "title", widget: "string"}
+      - {label: "Project Description", name: "body", widget: "markdown", required: false}
+      - {label: "Order (Lower number displays as higher on the page)", name: "weight", widget: "string", required: false}
+      - {label: "Featured?", name: "featured", widget: "boolean", default: false}
+      - {label: "Project Image", name: "thumbnail", widget: "image"}
+      - name: "gallery"
+        label: "Project Image Gallery" 
+        widget: "list"
+        required: false
+        optional: true
+        fields:
+          - {label: "Image Title", name: "imgTitle", widget: "string", required: false}
+          - {label: "Image", name: "imgSrc", widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
