@@ -3,21 +3,22 @@
       {{ range (where .Data.Pages "Section" "in" "projects") }}
             {{ if (eq .Params.featured true) }}
               <div class="overlay-container">
-                  <div class="vh-75-ns cover bg-center" style="opacity: 0.5; background-image: url({{- .Params.thumbnail -}}); background-attachment: fixed;"></div>
+                  <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity: 0.7; background-image: url({{- .Params.thumbnail -}}); background-attachment: fixed;"></div>
                   <div class="bottom-left">
-                      <p class="f1 tracked white lato">Carlos Mata is a multi-disciplinary architect <br>based out of Uvita, Costa Rica.</p>
+                      <img src="/images/cropped-trans-logo-white.png" class="dn dib-ns w-40 z-max" id="sticky-this" alt="Site Name">
+                      <p class="f1 tracked white lato">Tropical contemporary architecture.</p>
                       <a class="f2 fw1 link no-underline white" href="/projects">View Projects + </a> 
                   </div>
               </div>
             {{ end }}
       {{ end }}
     </div>
-  <article class="cf pa2 pa0-ns">
-    <div class="pa4 htc">
+  <article class="cf">
+    <div class="pv4 pl4">
       <div class="w-100 w-100-ns fix-grid">
         {{ range where .Data.Pages.ByWeight "Section" "in" (slice "projects") | first 5 }}
           {{ if not (eq .Params.featured true) }}  
-            <div class="fl w-50 w-50-ns pa1 fix-grid-item">
+            <div class="fl w-100 w-50-ns pr4-ns pr4-l fix-grid-item">
                 <a href="{{ .Permalink }}" class="dim db no-underline black shadow-5"><img class="db w-100" src="{{ .Params.thumbnail }}"></a>
                 <a href="{{ .Permalink }}" class="dim db no-underline black ttu tracked-mega fw1 f4 tc pa4">{{ .Title }}</a>
             </div>
@@ -40,5 +41,4 @@
       </div>
     </div>
   </article>
-
 {{ end }}

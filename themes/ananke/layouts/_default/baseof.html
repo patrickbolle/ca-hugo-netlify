@@ -48,8 +48,8 @@
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} avenir">
-
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+    
     <main class="pb1" role="main">
       {{ block "main" . }}{{ end }}
     </main>
