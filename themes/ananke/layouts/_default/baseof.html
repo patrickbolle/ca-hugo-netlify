@@ -45,9 +45,10 @@
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.7.4/tiny-slider.css">
   </head>
 
-  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} avenir">
+  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-black"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} avenir">
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
     
     <main class="pb1" role="main">

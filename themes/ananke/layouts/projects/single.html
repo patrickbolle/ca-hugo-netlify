@@ -1,11 +1,20 @@
 {{ define "main" }}
-  <article class="bg-white">
-      <article class="bg-white">
-        <div class="vh-75-ns cover bg-center" style="background-image: url({{- .Params.thumbnail -}}); background-attachment: fixed;"></div>
+  <div class="bg-black pg-siema">
+    <div class="overlay-container">
+        <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-image: url({{- .Params.thumbnail -}}); background-attachment: fixed;"></div>
+    </div>
+    {{ range .Params.gallery }}
+      <div class="overlay-container">
+          <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-image: url({{- .imgSrc -}}); background-attachment: fixed;"></div>
+      </div>
+    {{ end }}
+  </div>
+  <article class="bg-black">
+      <article class="bg-black">
         <div class="ph4 ph5-m ph6-l">
           <div class="pv5 f4 f2-ns measure center">
-            <h1 class="fw2 f1 fl w-100 black-70 mt0 mb3 avenir">{{- .Title -}}</h1>
-            <div class="avenir db lh-copy black-50 serif fw1 mv0 f4 f3-m f2-l measure">
+            <h1 class="fw2 f1 fl w-100 white-80 mt0 mb3 avenir">{{- .Title -}}</h1>
+            <div class="avenir db lh-copy white serif fw1 mv0 f4 f3-m f2-l measure">
                 {{- .Content | markdownify -}}
             </div>
              

@@ -8,7 +8,10 @@
       stickyWrap: true,
       stickyClass: 'small-sticky'
     });
-    console.log(sticky);
+    var sideSticky = new Sticky('.side-nav', {
+      stickyWrap: true,
+      stickyClass: 'side-sticky'
+    });
   </script>
   <script>
     const mySiema = new Siema({
@@ -18,5 +21,16 @@
       easing: 'ease-out',
     });
     setInterval(() => mySiema.next(), 6700)
+
+  </script>
+  <script>
+  // Project Page Slider
+    const projectSiema = new Siema({
+      loop: true,
+      selector: '.pg-siema',
+      duration: 500,
+      easing: 'ease-out',
+    });
+    setInterval(() => projectSiema.next(), 6700)
   </script>
 {{ end }}

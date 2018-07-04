@@ -43,12 +43,23 @@ body {
 }
 .bottom-left {
   position: absolute;
-  bottom: 35%;
+  bottom: 70%;
   left: 5%;
 }
+.bottom-right {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  z-index: 9999999999;
+}
+
 
 #sticky-this {
   padding-top: 15px;
+}
+
+.side-sticky {
+  padding-top: 40px;
 }
 
 .small-sticky {
