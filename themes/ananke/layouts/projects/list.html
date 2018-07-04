@@ -4,8 +4,8 @@
       <div class="w-100 w-100-ns fix-grid">
         {{ range where .Data.Pages.ByWeight "Section" "in" (slice "projects") }}
             <div class="fl w-100 w-50-ns pr4-ns pr4-l fix-grid-item">
-              <a href="{{ .Permalink }}" class="dim db no-underline black shadow-5"><img class="db w-100" src="{{ .Params.thumbnail }}"></a>
-              <a href="{{ .Permalink }}" class="dim db no-underline black ttu tracked-mega fw1 f4 tc pa4">{{ .Title }}</a>
+              <a href="{{ .Permalink }}" class="dim db no-underline white shadow-5"><img class="db w-100" src="{{ .Params.thumbnail }}"></a>
+              <a href="{{ .Permalink }}" class="dim db no-underline white ttu tracked-mega fw1 f4 tc pa4">{{ .Title }}</a>
             </div>
         {{ end }}
       </div>
