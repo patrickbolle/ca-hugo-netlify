@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ partial "side-nav.html" .}}
   <div class="bg-black siema">
     {{ range (where .Data.Pages "Section" "in" "projects") }}
           {{ if (eq .Params.featured true) }}
@@ -11,32 +10,34 @@
   </div>
   <div class="bottom-left">
       <a href="/"><img src="/images/cropped-trans-logo-white.png" class="dn dib-ns w-40 z-max" id="sticky-this" alt="Carlos Mata Architecture"></a>
-      <!-- <p class="f1 tracked white lato">Tropical contemporary architecture.</p> -->
   </div> 
      
   <article class="cf">
-    <div class="pv2 pl2">
+    <div class="pv3 pl4">
       <div class="w-100 w-100-ns fix-grid">
         {{ range where .Data.Pages.ByWeight "Section" "in" (slice "projects") | first 5 }}
           {{ if not (eq .Params.featured true) }}  
-            <div class="fl w-100 w-50-ns pt2 pr2-ns pr2-l fix-grid-item">
-                <a href="{{ .URL }}" class="dim db no-underline white shadow-5"><img class="db w-100" src="{{ .Params.thumbnail }}"></a>
-                <!-- <a href="{{ .Permalink }}" class="dim db no-underline white ttu tracked-mega fw4 f4 tc pa4">{{ .Title }}</a> -->
+            <div class="fl w-100 w-50-ns pr4-ns pv3 fix-grid-item">
+                <a href="{{ .Permalink }}" style="background-image: url({{ .Params.thumbnail }});" class="link h4 dt hide-child w-100 cover bg-center">
+                  <span class="white dtc v-mid w-100 h-100 child bg-black-40 pv7 tc ttu tracked-mega fw4 f3">
+                    {{ .Title }}
+                  </span>
+                </a>
             </div>
           {{ end }}
         {{ end }}
       </div>
     </div>    
-    <div class="tc pa2">
+    <!-- <div class="tc pa2">
         <a class="f2 fw1 link no-underline black" href="/projects">View All Projects + </a> 
-      </div>
+      </div> -->
   </article>
   <article class="cf pa2 pa0-ns">
     <div class="pa0">
       <div class="fl w-100 w-25-ns pa4">
-          <p class="tl f1 fw1 b--white-60 pb4 bb tracked white">Carlos Mata</p>
+          <p class="tl f1 fw1 b--black-60 pb4 bb tracked black-80 tc">Carlos Mata</p>
       </div>
-      <div class="fl w-100 w-75-ns pa4 white">
+      <div class="fl w-100 w-75-ns pa4 black-90">
           <p class=" tl f2 fw1">He has given lectures all over the world, and has received significant recognition like the Torroja Award for his Caja Granada or the Award of the UPM University for his Excellence in Teaching. In 2013 he was awarded the Heinrich Tessenow Gold Medal, the Arnold W. Brunner Memorial Prize of the American Academy of Arts and Letters, the International Award Architecture in Stone in Verona, and the RIBA International Fellowship 2014 of the Royal Institute of British Architects. Also in 2014 he was elected Full Member to the Royal Academy of Fine Arts of San Fernando of Spain. </p>
 
       </div>

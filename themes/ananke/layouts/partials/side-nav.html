@@ -1,11 +1,21 @@
-<div class="bottom-right">
+<div class="bottom-right ">
   <div class="side-nav">
-    {{ range .Site.Menus.main }}
-      <li class="list  fw4 dib ph3-ns">
-        <a class="link dim f4 f3-ns dib mh3 pb3 ttu tracked-mega fw5 lato white" href="{{ .URL }}" title="{{ .Name }} page">
-            {{ .Name }}
-        </a>
-      </li>
+    {{ if or (.IsHome) (isset .Params "thumbnail") (.Site.GetPage "section" "projects") }}
+      {{ range .Site.Menus.main }}
+        <li class="list fw4 pv1 ph3-ns">
+            <a class="link dim f4 f3-ns mh3 pb3 ttu tracked-mega fw5 lato white" href="{{ .URL }}" title="{{ .Name }} page">
+                {{ .Name }}
+            </a>
+        </li>
+      {{ end }}
+    {{ else }}
+      {{ range .Site.Menus.main }}
+        <li class="list fw4 pv1 ph3-ns">
+            <a class="link dim f4 f3-ns mh3 pb3 ttu tracked-mega fw5 lato black-80" href="{{ .URL }}" title="{{ .Name }} page">
+                {{ .Name }}
+            </a>
+        </li>
+      {{ end }}
     {{ end }}
   </div>
 </div>

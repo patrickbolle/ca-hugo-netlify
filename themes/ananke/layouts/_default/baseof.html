@@ -48,10 +48,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.7.4/tiny-slider.css">
   </head>
 
-  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-black"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} avenir">
+  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} avenir">
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
     
     <main class="pb1" role="main">
+      {{ partial "side-nav.html" .}}
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
