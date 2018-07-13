@@ -2,8 +2,11 @@
 {{ with $script.js }}
   <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
   <script src="/js/siema.min.js"></script>
+  <script src="/js/mixitup.min.js"></script>
   <script src="/js/sticky.min.js"></script>
   <script>
+    var mixer = mixitup('.filter-container');
+
     var sticky = new Sticky('#sticky-this', {
       stickyWrap: true,
       stickyClass: 'small-sticky'
