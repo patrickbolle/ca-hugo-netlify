@@ -3,6 +3,7 @@ title: Wood Residence
 weight: '2'
 featured: true
 thumbnail: /images/uploads/wood-1.1.jpg
+category: Residential
 date: '2018-06-20T15:14:42-04:00'
 ---
 

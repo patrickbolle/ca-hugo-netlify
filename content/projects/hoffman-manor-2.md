@@ -1,6 +1,8 @@
 ---
-title: Hoffman Manor 2
+title: Hoffman Manor
+featured: false
 thumbnail: /images/uploads/01.jpg
+category: Residential
 gallery: []
 date: '2018-06-20T14:22:21-04:00'
 ---
