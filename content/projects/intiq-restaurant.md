@@ -1,7 +1,7 @@
 ---
 title: Intiq Restaurant
 weight: '4'
-featured: false
+featured: true
 thumbnail: /images/uploads/9.bar.jpg
 category: Commercial
 date: '2018-06-20T15:12:25-04:00'

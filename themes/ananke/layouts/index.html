@@ -9,17 +9,17 @@
     {{ end }}
   </div>
   <div class="bottom-left">
-      <a href="/"><img src="/images/cropped-trans-logo-white.png" class="dn dib-ns w-40 z-max" id="sticky-this" alt="Carlos Mata Architecture"></a>
+      <a href="/"><img src="/images/cropped-trans-logo-white.png" class="dn dib-ns w-60 w-40-l z-max" id="sticky-this" alt="Carlos Mata Architecture"></a>
   </div> 
      
   <article class="cf">
-    <div class="pv3 pl4">
+    <div class="pv3 ph2 pl4-ns">
       <div class="w-100 w-100-ns fix-grid">
         {{ range where .Data.Pages.ByWeight "Section" "in" (slice "projects") | first 5 }}
           {{ if not (eq .Params.featured true) }}  
-            <div class="fl w-100 w-50-ns pr4-ns pv3 fix-grid-item">
+            <div class="fl w-100 w-50-ns pr4-ns pv2 pv3-ns fix-grid-item">
                 <a href="{{ .Permalink }}" style="background-image: url({{ .Params.thumbnail }});" class="link h4 dt hide-child w-100 cover bg-center">
-                  <span class="white dtc v-mid w-100 h-100 child bg-black-40 pv7 tc ttu tracked-mega fw4 f3">
+                  <span class="white dtc v-mid w-100 h-100 child bg-black-40 pv6 pv7-ns tc ttu tracked-mega fw4 f3">
                     {{ .Title }}
                   </span>
                 </a>
@@ -34,8 +34,8 @@
   </article>
   <article class="cf pa2 pa0-ns">
     <div class="pa0">
-      <div class="fl w-100 w-25-ns pa4">
-          <p class="tl f1 fw1 b--black-60 pb4 bb tracked black-80 tc">Carlos Mata</p>
+      <div class="fl w-100 w-25-ns ph4 pa4-ns">
+          <p class="tl f1 fw1 b--black-60 pb4-ns bb tracked black-80 tc">Carlos Mata</p>
       </div>
       <div class="fl w-100 w-75-ns pa4 black-90">
           <p class=" tl f2 fw1">He has given lectures all over the world, and has received significant recognition like the Torroja Award for his Caja Granada or the Award of the UPM University for his Excellence in Teaching. In 2013 he was awarded the Heinrich Tessenow Gold Medal, the Arnold W. Brunner Memorial Prize of the American Academy of Arts and Letters, the International Award Architecture in Stone in Verona, and the RIBA International Fellowship 2014 of the Royal Institute of British Architects. Also in 2014 he was elected Full Member to the Royal Academy of Fine Arts of San Fernando of Spain. </p>

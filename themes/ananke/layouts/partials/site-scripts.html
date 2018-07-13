@@ -1,19 +1,16 @@
 {{ $script := .Site.Data.webpack_assets.app }}
 {{ with $script.js }}
   <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
+  <script
+			  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+			  crossorigin="anonymous"></script>
   <script src="/js/siema.min.js"></script>
   <script src="/js/mixitup.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="/js/sticky.min.js"></script>
+  
   <script>
-    var mixer = mixitup('.filter-container', {
-      "animation": {
-        "duration": 250,
-        "nudge": false,
-        "reverseOut": false,
-        "effects": "fade"
-      }
-    });
-
     var sticky = new Sticky('#sticky-this', {
       stickyWrap: true,
       stickyClass: 'small-sticky'
@@ -24,13 +21,13 @@
     // });
   </script>
   <script>
-    const mySiema = new Siema({
-      loop: true,
-      selector: '.siema',
-      duration: 500,
-      easing: 'ease-out',
-    });
-    setInterval(() => mySiema.next(), 6700)
+    // const mySiema = new Siema({
+    //   loop: true,
+    //   selector: '.siema',
+    //   duration: 500,
+    //   easing: 'ease-out',
+    // });
+    // setInterval(() => mySiema.next(), 6700)
 
   </script>
   <script>
@@ -42,5 +39,34 @@
       easing: 'ease-out',
     });
     setInterval(() => projectSiema.next(), 6700)
+  </script>
+
+  <script>
+    var mixer = mixitup('.filter-container', {
+      "animation": {
+        "duration": 250,
+        "nudge": false,
+        "reverseOut": false,
+        "effects": "fade"
+      }
+    });
+  </script>
+
+  <script>
+  $(document).ready(function(){
+    $('.siema').slick({
+      slidesToScroll: 1,
+      dots: false,
+      prevArrow: false,
+      nextArrow: false,
+      useTransform: true,
+      cssEase: 'linear',
+      speed: 4000,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      fade: true,
+      infinite: true
+    });
+  });
   </script>
 {{ end }}
