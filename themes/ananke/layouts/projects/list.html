@@ -1,9 +1,16 @@
 {{ define "main" }}
 <article class="cf  pa4 pa0-ns pt5-ns">
     <div class="pv4 pl4">
-      <div class="w-100 w-100-ns fix-grid">
+    <h1 class="fw2 f1 fl w-100 black-80 mt0 mb3 avenir tc">Projects</h1>
+    <div class="tc">
+        <button class="f6 w-10 link dim ba ph3 pv2 mb2 dib black" type="button" data-filter="all">All</button>
+        <button class="f6 w-10 link dim ba ph3 pv2 mb2 dib black" type="button" data-filter=".Residential">Residential</button>
+        <button class="f6 w-10 link dim ba ph3 pv2 mb2 dib black" type="button" data-filter=".Commercial">Commercial</button>
+    </div>
+
+      <div class="w-100 w-100-ns fix-grid filter-container">
         {{ range where .Data.Pages.ByWeight "Section" "in" (slice "projects") }}
-          <div class="fl w-100 w-50-ns pr4-ns pv3 fix-grid-item">
+          <div class="fl w-100 w-50-ns pr4-ns pv3 fix-grid-item mix {{ .Params.category }}">
               <a href="{{ .Permalink }}" style="background-image: url({{ .Params.thumbnail }});" class="link h4 dt hide-child w-100 cover bg-center">
                 <span class="white dtc v-mid w-100 h-100 child bg-black-40 pv7 tc ttu tracked-mega fw4 f4">
                   {{ .Title }}
