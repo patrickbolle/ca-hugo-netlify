@@ -17,6 +17,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Order (Lower number displays as higher on the page)", name: "weight", widget: "string", required: false}
       - {label: "Featured?", name: "featured", widget: "boolean", default: false}
       - {label: "Project Image", name: "thumbnail", widget: "image"}
+      - label: "Project Category"
+        name: "category"
+        widget: "select"
+        options: ["Residential", "Commercial"]
       - name: "gallery"
         label: "Project Image Gallery" 
         widget: "list"
