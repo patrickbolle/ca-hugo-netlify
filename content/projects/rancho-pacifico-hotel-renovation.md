@@ -2,6 +2,7 @@
 title: Rancho Pacifico Hotel Renovation
 featured: true
 thumbnail: /images/uploads/02.jpg
+category: Commercial
 date: '2018-06-20T14:34:49-04:00'
 ---
 
