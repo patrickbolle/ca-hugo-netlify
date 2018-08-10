@@ -38,7 +38,17 @@
       duration: 500,
       easing: 'ease-out',
     });
-    setInterval(() => projectSiema.next(), 6700)
+    setInterval(() => projectSiema.next(), 6700);
+
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+
+    prev.addEventListener('click', () => {
+      projectSiema.prev(1)
+    });
+    next.addEventListener('click', () => {
+      projectSiema.next(1)
+    });
   </script>
 
   <script>
@@ -47,26 +57,63 @@
         "duration": 250,
         "nudge": false,
         "reverseOut": false,
-        "effects": "fade"
+        "effects": "fade",
+      },
+      layout: {
+        containerClassName: 'portfolio-filter'
       }
     });
   </script>
 
   <script>
   $(document).ready(function(){
-    $('.siema').slick({
-      slidesToScroll: 1,
-      dots: false,
-      prevArrow: false,
-      nextArrow: false,
-      useTransform: true,
-      cssEase: 'linear',
-      speed: 4000,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      fade: true,
-      infinite: true
-    });
+    // $('.siema').slick({
+    //   slidesToScroll: 1,
+    //   dots: false,
+    //   prevArrow: false,
+    //   nextArrow: false,
+    //   useTransform: true,
+    //   cssEase: 'linear',
+    //   speed: 4000,
+    //   autoplay: true,
+    //   autoplaySpeed: 4000,
+    //   fade: true,
+    //   infinite: true
+    // });
+      var $slideshow = $('.siema');
+      var ImagePauses = [4000, 300, 4000, 300, 4000, 300, 4000, 300, 4000, 300, 4000, 300, 4000, 300, 4000, 300];
+
+      // Init
+      $slideshow.slick({
+        initialSlide: 0,
+        autoplay: true,
+        autoplaySpeed: ImagePauses[0],
+        dots: false,
+        arrows: false,
+        speed: 1250,
+        fade: true
+      });
+
+      // Sliding settings
+      $slideshow.on('afterChange', function(event, slick, currentSlide) {
+        // Console log, can be removed
+        console.log('Current slide: ' + currentSlide + '. Setting speed to: ' + ImagePauses[currentSlide]);
+
+        // Update autoplay speed according to slide index
+        $slideshow.slick('slickSetOption', 'autoplaySpeed', ImagePauses[currentSlide], true);
+
+      });
+  });
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 256,
+    'tolerance': 70
+  });
+
+  // Toggle button
+  document.querySelector('.toggle-button').addEventListener('click', function() {
+    slideout.toggle();
   });
   </script>
 {{ end }}

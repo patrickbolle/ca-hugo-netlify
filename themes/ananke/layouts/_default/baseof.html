@@ -44,18 +44,33 @@
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <meta name="google-site-verification" content="DwKCpxc88Q8vBbCdXP8Zke_Lr0CwGz4iCLjSmhhh4us" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} avenir">
-    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
     
-    <main class="pb1" role="main">
+    <main class="pb1" role="main" id="panel">
+      {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
       {{ partial "side-nav.html" .}}
-      {{ block "main" . }}{{ end }}
+      {{ block "main" . }}{{ end }}      
     </main>
+    <nav id="menu" class="tc">
+        <ul class="pl0">
+          {{ range .Site.Menus.main }}
+            <li class="list fw4 dib ph3-ns v-mid tc">
+              <a class="link dim f4 dib mh3 ttu tracked-mega fw1 pv3 avenir black tc" href="{{ .URL }}" title="{{ .Name }} page">
+                  {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      
+      </nav>
     {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
     {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
   </body>

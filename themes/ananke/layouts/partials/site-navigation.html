@@ -1,48 +1,19 @@
 {{ if .IsHome }}
   <nav class="db dt-l w-100 border-box pa3 ph5-l fixed z-max dn-ns">
-    <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="/" title="Home">
-      <img src="/images/cropped-trans-logo-white.png" class="dib w-90 dn-ns" alt="Site Name">
+    <a class="toggle-button toggle-button-home dn-ns w-10 f2 fw1 tl fl white">☰</a>
+    <a class="db dtc-l v-mid mid-gray link dim w-80 w-25-l tc tl-l mb2 mb0-l fl" href="/" title="Home">
+      <img src="/images/cropped-trans-logo-white.png" class="dib w-100 dn-ns" alt="Site Name">
     </a>
-    <div class="v-mid w-100 w-75-l tc tr-l h3 dn-ns">
-      {{ range .Site.Menus.main }}
-        <li class="list f5 f4-ns fw4 dib ph3-ns">
-          <a class="link dim f6 f5-ns dib mh3 ttu tracked-mega fw5 lato white" href="{{ .URL }}" title="{{ .Name }} page">
-              {{ .Name }}
-          </a>
-        </li>
-      {{ end }}
-    </div>
   </nav>
 {{ else }}
   <nav class="db dt-l w-100 border-box pa3 ph5-l z-max fixed">
-    <a class="db v-mid mid-gray link dim w-100 w-100-m w-33-ns tc tl-l mb2 mb0-l" href="/" title="Home">
+    <a class="toggle-button dn-ns w-10 f2 fw1 tl fl">☰</a>
+    <a class="db w-80 v-mid mid-gray link dim tc tl-l mb2 mb0-l fl" href="/" title="Home">
       {{ if isset .Params "thumbnail" }}
-        <img src="/images/cropped-trans-logo-white.png" class="dib w-90 w-50-m logo" alt="Site Name">
+        <img src="/images/cropped-trans-logo-white.png" class="dib w-100 w-33-ns w-50-m logo fl" alt="Site Name">
       {{ else }}
-        <img src="/images/cropped-trans-logo.png" class="dib w-90 w-50-m logo" alt="Site Name">
+        <img src="/images/cropped-trans-logo.png" class="dib w-100 w-33-ns w-50-m logo fl" alt="Site Name">
       {{ end }}
     </a>
-    <div class="db dn-ns v-mid w-100 w-75-l tc tr-l h3">
-      {{ if isset .Params "thumbnail" }}
-        {{ range .Site.Menus.main }}
-          <li class="list fw4 dib ph3-ns v-mid">
-            <a class="link dim f6 f5-ns dib mh3 ttu tracked-mega fw5 lato white" href="{{ .URL }}" title="{{ .Name }} page">
-                {{ .Name }}
-            </a>
-          </li>
-        {{ end }}
-      {{ else }}
-        {{ range .Site.Menus.main }}
-          <li class="list fw4 dib ph3-ns v-mid">
-            <a class="link dim f6 f5-ns dib mh3 ttu tracked-mega fw5 lato black-80" href="{{ .URL }}" title="{{ .Name }} page">
-                {{ .Name }}
-            </a>
-          </li>
-        {{ end }}
-      {{ end }}
-    </div>
   </nav>
 {{ end }}
-
-
-

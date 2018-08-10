@@ -1,20 +1,21 @@
 {{ define "main" }}
-<article class="cf pa0 pr2 pa4-ns pt6 pt6-ns" >
-    <h1 class="fw1 f1 fl w-100 black-80 mt0 mb3 avenir tc">Projects</h1>
+<article class="cf pa0 pr2 pa4-ns pt6 pt6-ns ph4 tc" >
+    <h1 class="fw4 f2 ttu tracked fl w-100 black-80 mt0 mb3 avenir tc">Projects</h1>
     <div class="tc">
-        <button class="f6 w-33 w-10-ns link dim ba ph3 pv2 mb2 dib black" type="button" data-filter="all">All</button>
-        <button class="f6 w-33 w-10-ns link dim ba ph3 pv2 mb2 dib black" type="button" data-filter=".Residential">Residential</button>
-        <button class="f6 w-33 w-10-ns link dim ba ph3 pv2 mb2 dib black" type="button" data-filter=".Commercial">Commercial</button>
+        <button class="f6 w-40 w-33-ns w-10-ns link dim ba ph3 pv2 mb2 dib black" type="button" data-filter="all">All</button>
+        <button class="f6 w-40 w-33-ns w-10-ns link dim ba ph3 pv2 mb2 dib black" type="button" data-filter=".Residential">Residential</button>
+        <button class="f6 w-40 w-33-ns w-10-ns link dim ba ph3 pv2 mb2 dib black" type="button" data-filter=".Commercial">Commercial</button>
     </div>
     <div class="w-100 w-100-ns fix-grid filter-container">
-      {{ range where .Data.Pages.ByWeight "Section" "in" (slice "projects") }}
-        <div class="fl w-100 w-50-ns pr4-ns pv3 fix-grid-item mix {{ .Params.category }}">
-            <a href="{{ .Permalink }}" style="background-image: url({{ .Params.thumbnail }});" class="link h4 dt hide-child w-100 cover bg-center">
-              <span class="white dtc v-mid w-100 h-100 child bg-black-40 pv7-ns tc ttu tracked-mega fw4 f3">
-                {{ .Title }}
-              </span>
-            </a>
-        </div>
+      {{ range $index, $element := where .Data.Pages.ByWeight "Section" "in" (slice "projects") }}
+          <div class="fl w-100 w-50-ns pr4-ns pv2 pv3-ns fix-grid-item mix {{ .Params.category }}">
+              <a href="{{ .Permalink }}" style="background-image: url({{ .Params.thumbnail }});" class="link h4 dt hide-child w-100 cover bg-center">
+                <span class="white dtc v-mid w-100 h-100 child bg-black-40 pv6 pv7-ns tc ttu tracked-mega fw4 f3">
+                  {{ .Title }}
+                </span>
+              </a>
+          </div>
+
       {{ end }}
     </div>
   </article>
