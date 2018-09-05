@@ -3,10 +3,14 @@
     {{ range (where .Data.Pages "Section" "in" "projects") }}
           {{ if (eq .Params.featured true) }}
             <div class="overlay-container">
+              <a href="{{ .Permalink }}">
                 <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-image: url({{- .Params.thumbnail -}}); background-attachment: fixed;"></div>
+              </a>
             </div>
             <div class="overlay-container">
-              <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-color: black; background-attachment: fixed;"></div>
+              <a href="{{ .Permalink }}">
+                <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-color: black; background-attachment: fixed;"></div>
+              </a>
             </div>
           {{ end }}
     {{ end }}
@@ -35,7 +39,7 @@
         <a class="f2 fw1 link no-underline black" href="/projects">View All Projects + </a> 
       </div> -->
   </article>
-  <article class="cf pa2 pa0-ns">
+  <article class="cf pa2 pt5-ns">
     <div class="pa0">
       <div class="fl w-100 w-25-ns ph4 pa4-ns">
           <p class="tl f2 f1-ns fw1 pb4 pb0-ns b--black-60 pb4-ns bb tracked black-80 tc ttu">Carlos Mata</p>

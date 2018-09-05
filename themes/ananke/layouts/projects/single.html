@@ -2,11 +2,11 @@
 <div class="relative">
     <div class="bg-white pg-siema">
       <div class="overlay-container">
-          <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-image:  linear-gradient(to bottom,rgba(0,0,0, 0), rgba(0,0,0, 0.35)),url({{- .Params.thumbnail -}}); background-attachment: fixed;"></div>
+          <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-image:  linear-gradient(to bottom,rgba(0,0,0, 0), rgba(0,0,0, 0.35)),url({{- .Params.thumbnail -}});"></div>
       </div>
       {{ range .Params.gallery }}
         <div class="overlay-container">
-            <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-image:linear-gradient(to bottom,rgba(0,0,0, 0), rgba(0,0,0, 0.35)), url({{- .imgSrc -}}); background-attachment: fixed;"></div>
+            <div class="vh-75 vh-100-ns cover bg-center htc" style="opacity:1; background-image:linear-gradient(to bottom,rgba(0,0,0, 0), rgba(0,0,0, 0.35)), url({{- .imgSrc -}});"></div>
         </div>
       {{ end }}
     </div>
@@ -19,7 +19,7 @@
       <article class="bg-white">
         <div class="ph4 ph5-m ph6-l">
           <div class="pv2 pv5-ns f4 f2-ns measure center">
-            <div class="avenir db lh-copy black serif fw1 mv0 f4 f3-m f2-l measure">
+            <div class="avenir db lh-copy black serif fw1 mv0 f4 f3-m f2-l measure tj">
                 {{- .Content | markdownify -}}
             </div>
              
