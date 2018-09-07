@@ -24,7 +24,7 @@
       <div class="w-100 w-100-ns fix-grid">
         {{ range where .Data.Pages.ByWeight "Section" "in" (slice "projects") | first 5 }}
           {{ if not (eq .Params.featured true) }}  
-            <div class="fl w-100 w-50-ns pr4-ns pv2 pv3-ns fix-grid-item">
+            <div class="fl w-100 w-100-ns pr4-ns pv2 pv3-ns fix-grid-item">
                 <a href="{{ .Permalink }}" style="background-image: url({{ .Params.thumbnail }});" class="link h4 dt hide-child w-100 cover bg-center">
                   <span class="white dtc v-mid w-100 h-100 child bg-black-40 pv6 pv7-ns tc ttu tracked-mega fw4 f3">
                     {{ .Title }}
@@ -39,7 +39,7 @@
         <a class="f2 fw1 link no-underline black" href="/projects">View All Projects + </a> 
       </div> -->
   </article>
-  <article class="cf pa2 pt5-ns">
+  <article class="cf pa2 pt5-ns light-section">
     <div class="pa0">
       <div class="fl w-100 w-25-ns ph4 pa4-ns">
           <p class="tl f2 f1-ns fw1 pb4 pb0-ns b--black-60 pb4-ns bb tracked black-80 tc ttu">Carlos Mata</p>

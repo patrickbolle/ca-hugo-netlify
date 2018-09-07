@@ -9,8 +9,62 @@
   <script src="/js/mixitup.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="/js/sticky.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
   
   <script>
+    // Start midnight
+    $(document).ready(function(){
+
+        $(window).scroll(function(){
+          // Bottom right sticky menu switching
+          // Only trigger if there is an element named .light-section on the page
+          if ($('.light-section').length) {
+            let section_position = $('.light-section').offset().top + 200;
+            let section_height = $('.light-section').height();
+            let menu_position = $('.bottom-right').offset().top;
+
+            if (menu_position > section_position && menu_position < (section_position + section_height)) {
+              $('.bottom-right').addClass('dark-text');
+              $('.bottom-right').removeClass('light-text');
+            }
+            else {
+              $('.bottom-right').removeClass('dark-text');
+              $('.bottom-right').addClass('light-text');
+            }
+
+            // Logo switching
+            let logo_position = $('.logo-here').offset().top;
+
+            if (logo_position > section_position && logo_position < (section_position + section_height)) {
+              // Switch to dark logo
+              console.log('dark');
+              $(".logo-here img").attr("src","/images/cropped-trans-logo.png");
+            } else {
+              // Switch to light logo
+              console.log('special');
+              $(".logo-here img").attr("src","/images/cropped-trans-logo-white.png");
+            }
+          }
+        })
+
+        $(window).scroll(function() {
+          // Logo on list page switching
+          // Only trigger if there is a .special-light-section element on the page (should only exist on projects page)
+          if ($('.special-light-section').length) {
+            let special_section_position = $('.special-light-section').offset().top;
+            let special_section_height = $('.special-light-section').height();
+            let logo_position = $('.logo-here').offset().top;
+
+            if (logo_position < special_section_position && logo_position < (special_section_position + special_section_height)) {
+              // Switch to dark logo
+              $(".logo-here img").attr("src","/images/cropped-trans-logo.png");
+            } else {
+              // Switch to light logo
+              $(".logo-here img").attr("src","/images/cropped-trans-logo-white.png");
+            }
+          }
+        })
+    })
     var sticky = new Sticky('#sticky-this', {
       stickyWrap: true,
       stickyClass: 'small-sticky'

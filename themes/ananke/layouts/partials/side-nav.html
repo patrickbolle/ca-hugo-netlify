@@ -1,6 +1,6 @@
 <div class="bottom-right dn db-ns ">
   <div class="side-nav">
-    {{ if or (.IsHome) (isset .Params "thumbnail") }}
+    {{ if or (.IsHome) (isset .Params "thumbnail") (eq .Kind "section") }}
       {{ range .Site.Menus.main }}
         <li class="list fw4 pv1 ph3-ns">
             <a class="link dim f4 f3-ns mh3 pb3 ttu tracked-mega fw5 lato white" href="{{ .URL }}" title="{{ .Name }} page">

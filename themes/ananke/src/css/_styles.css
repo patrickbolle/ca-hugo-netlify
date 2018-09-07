@@ -77,12 +77,12 @@ body {
   }
 }
 
-.fix-grid-item:nth-child(1) {
+/* .fix-grid-item:nth-child(1) {
   width: 100% !important;
 }
 .fix-grid-item:nth-child(4n) {
   width: 100% !important;
-}
+} */
 
 .w-15 {
   width: 15%;
@@ -196,3 +196,10 @@ body {
   font-size: 1.6rem;
 }
 
+/* Midnight JS Tweaks */
+.dark-text a {
+  color: rgba(0, 0, 0, .8);
+}
+.light-text a {
+  color: white;
+}
