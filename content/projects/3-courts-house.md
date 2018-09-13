@@ -4,6 +4,19 @@ weight: '3'
 featured: false
 thumbnail: /images/uploads/1.png
 category: Residential
+gallery:
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/0/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/1/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/2/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/3/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/4/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/5/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/6/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/7/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/8/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/9/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/10/'
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/11/'
 date: '2018-06-20T15:39:45-04:00'
 ---
 
