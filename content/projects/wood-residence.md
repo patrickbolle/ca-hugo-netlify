@@ -1,6 +1,6 @@
 ---
 title: Wood Residence
-weight: '2'
+weight: '7'
 featured: true
 thumbnail: /images/uploads/wood-1.1.jpg
 category: Residential
