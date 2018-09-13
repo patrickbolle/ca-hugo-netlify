@@ -27,7 +27,7 @@ collections: # A list of collections the CMS should be able to edit
         options: ["Residential", "Commercial"]
       - name: "gallery"
         label: "Project Image Gallery" 
-        widget: image
+        widget: "list"
         required: false
         optional: true
         options:
