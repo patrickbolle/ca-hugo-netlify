@@ -3,6 +3,10 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 269d86e587708d5f8900
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections: # A list of collections the CMS should be able to edit
@@ -23,10 +27,12 @@ collections: # A list of collections the CMS should be able to edit
         options: ["Residential", "Commercial"]
       - name: "gallery"
         label: "Project Image Gallery" 
-        widget: "list"
+        widget: image
         required: false
         optional: true
-        fields:
-          - {label: "Image Title", name: "imgTitle", widget: "string", required: false}
-          - {label: "Image", name: "imgSrc", widget: "image"}
+        options:
+        media_library:
+          config:
+            multiple: true
+            previewStep: false
       - {label: "Publish Date", name: "date", widget: "datetime"}
