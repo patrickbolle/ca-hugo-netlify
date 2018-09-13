@@ -5,7 +5,7 @@ featured: false
 thumbnail: /images/uploads/desh-2.jpg
 category: Residential
 gallery:
-  - imgSrc: /images/uploads/desh-1.jpg
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/0/'
 date: '2018-06-20T14:51:11-04:00'
 ---
 Lorem ipsum dolor sit amet, an pro clita accusam voluptatibus, at sed suas tincidunt philosophia, salutatus adipiscing elaboraret in est. Cetero apeirian sea te. Vix mundi decore ex. Dicunt nominavi mea id.

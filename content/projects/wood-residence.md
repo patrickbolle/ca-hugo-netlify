@@ -4,6 +4,8 @@ weight: '2'
 featured: true
 thumbnail: /images/uploads/wood-1.1.jpg
 category: Residential
+gallery:
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/0/'
 date: '2018-06-20T15:14:42-04:00'
 ---
 

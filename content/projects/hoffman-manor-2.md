@@ -3,7 +3,8 @@ title: Hoffman Manor
 featured: false
 thumbnail: /images/uploads/01.jpg
 category: Residential
-gallery: []
+gallery:
+  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/0/'
 date: '2018-06-20T14:22:21-04:00'
 ---
 Lorem ipsum dolor sit amet, an pro clita accusam voluptatibus, at sed suas tincidunt philosophia, salutatus adipiscing elaboraret in est. Cetero apeirian sea te. Vix mundi decore ex. Dicunt nominavi mea id.
