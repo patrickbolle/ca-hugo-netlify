@@ -69,11 +69,31 @@ body {
   font-family: 'Futura', sans-serif !important;
 } 
 
+
+.height-250 {
+  height: 250px;
+}
+
+.padding-5ish {
+  padding-top: 4rem;
+}
 @media (--breakpoint-not-small) {
   .htc {
     display:flex;
     justify-content:center;
     align-items:center;
+  }
+  .white-text {
+    color: white !important;
+  }
+  .contain {
+    background-size: cover !important;
+  }
+  .padding-5ish {
+    padding-top: 0px;
+  }
+  .height-250 {
+    height: 100vh;
   }
 }
 
@@ -186,15 +206,17 @@ body {
   display: block;
 }
 
+.toggle-button-home {
+  color: white;
+  font-size: 1.6rem;
+}
+
 .toggle-button {
   color: #464644;
   font-size: 1.6rem;
 }
 
-.toggle-button-home {
-  color: white;
-  font-size: 1.6rem;
-}
+
 
 /* Midnight JS Tweaks */
 .dark-text a {
