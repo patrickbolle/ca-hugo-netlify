@@ -38,11 +38,11 @@
             if (logo_position > section_position && logo_position < (section_position + section_height)) {
               // Switch to dark logo
               console.log('dark');
-              $(".logo-here img").attr("src","/images/cropped-trans-logo.png");
+              $(".logo-here .desktop-logo img").attr("src","/images/cropped-trans-logo.png");
             } else {
               // Switch to light logo
               console.log('special');
-              $(".logo-here img").attr("src","/images/cropped-trans-logo-white.png");
+              $(".logo-here .desktop-logo img").attr("src","/images/cropped-trans-logo-white.png");
             }
           }
         })

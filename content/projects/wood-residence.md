@@ -1,11 +1,21 @@
 ---
 title: Wood Residence
-weight: '2'
+weight: '7'
 featured: true
 thumbnail: /images/uploads/wood-1.1.jpg
 category: Residential
 gallery:
-  - 'https://ucarecdn.com/8cc36187-65ce-4569-98cd-9b212f598b55~12/nth/0/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/0/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/1/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/2/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/3/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/4/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/5/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/6/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/7/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/8/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/9/'
+  - 'https://ucarecdn.com/2d79af74-623f-4651-9b7c-1b543b7c2bc8~11/nth/10/'
 date: '2018-06-20T15:14:42-04:00'
 ---
 
