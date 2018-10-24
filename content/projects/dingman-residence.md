@@ -1,7 +1,7 @@
 ---
 title: Dingman Residence
 weight: '3'
-featured: false
+featured: true
 thumbnail: /images/uploads/1.jpg
 category: Residential
 gallery:
