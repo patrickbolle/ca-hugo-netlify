@@ -1,17 +1,27 @@
 {{ if .IsHome }}
   <nav class="db dt-l w-100 border-box pa3 ph5-l fixed z-max dn-ns">
     <a class="toggle-button toggle-button-home dn-ns w-10 f2 fw1 tc fl white relative top-1">☰</a>
-    <a class="db dtc-l v-mid mid-gray link dim w-80 w-25-l tr tl-l mb2 mb0-l fr" href="/" title="Home">
+    <a class="db dtc-l v-mid mid-gray link dim w-80 w-30-ns tr tl-l mb2 mb0-l fr" href="/" title="Home">
       <img src="/images/cropped-trans-logo-white.png" class="dib w-90 dn-ns fl" alt="Site Name">
+    </a>
+  </nav>
+{{ else if (isset .Params "thumbnail") }}
+  <nav class="logo-here db dt-l w-100 border-box pa3 ph5-l z-max fixed-ns">
+    <a class="toggle-button-home toggle-button dn-ns w-10 f2 fw1 tc fl absolute top-2 black">☰</a>
+    <a class="dtc-ns v-mid mid-gray link dim w-80 w-30-ns tc tl-l mb2 mb0-l fl dn desktop-logo" href="/" title="Home">
+        <img src="/images/cropped-trans-logo-white.png" class="dib w-90 logo fl" alt="Site Name">
+    </a>
+    <a class="db dtc-l v-mid mid-gray link dim w-80 w-30-ns tc tl-l mb2 mb0-l fr dn db-ns mobile-logo" href="/" title="Home">
+      <img src="/images/cropped-trans-logo.png" class="dib w-90 w-33-ns logo fl" alt="Site Name">
     </a>
   </nav>
 {{ else }}
   <nav class="logo-here db dt-l w-100 border-box pa3 ph5-l z-max fixed-ns">
     <a class="toggle-button-home toggle-button dn-ns w-10 f2 fw1 tc fl absolute top-2 black">☰</a>
-    <a class="dtc-l v-mid mid-gray link dim w-80 w-25-l tc tl-l mb2 mb0-l fr dn desktop-logo" href="/" title="Home">
-        <img src="/images/cropped-trans-logo.png" class="dib w-90 w-33-ns logo fl" alt="Site Name">
+    <a class="dtc-ns v-mid mid-gray link dim w-80 w-30-ns tc tl-l mb2 mb0-l fl dn desktop-logo" href="/" title="Home">
+      <img src="/images/cropped-trans-logo.png" class="dib w-90 logo fl" alt="Site Name">
     </a>
-    <a class="db dtc-l v-mid mid-gray link dim w-80 w-25-l tc tl-l mb2 mb0-l fr dn db-ns mobile-logo" href="/" title="Home">
+    <a class="db dtc-l v-mid mid-gray link dim w-80 w-30-ns tc tl-l mb2 mb0-l fr dn db-ns mobile-logo" href="/" title="Home">
       <img src="/images/cropped-trans-logo.png" class="dib w-90 w-33-ns logo fl" alt="Site Name">
     </a>
   </nav>

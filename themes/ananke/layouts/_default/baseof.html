@@ -52,7 +52,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
   </head>
 
-  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} avenir">
+  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} avenir {{ if .IsHome }}home-template{{ end }}">
     
     <main class="pb1" role="main" id="panel">
       {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
